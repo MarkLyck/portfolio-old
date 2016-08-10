@@ -1,6 +1,8 @@
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
 @import "variables";
+@import "animations";
 @import "hero";
+
 
 body {
   font-family: 'Lato', sans-serif;
@@ -35,4 +37,8 @@ button {
   color: #fff;
   background: none;
   border: 1px solid #fff;
+}
+
+.bold {
+  font-weight: 400;
 }

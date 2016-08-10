@@ -38,18 +38,16 @@ header {
 
 #hero-canvas {
   width: 100%;
-  // background: $primary-color;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#35b8ff+0,00a3ff+100 */
-  background: #35b8ff; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #35b8ff 0%, #00a3ff 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  #35b8ff 0%,#00a3ff 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  #35b8ff 0%,#00a3ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35b8ff', endColorstr='#00a3ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
 
 #hero {
   position: relative;
+  background: #35b8ff; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #35b8ff 0%, #00a3ff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #35b8ff 0%,#00a3ff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #35b8ff 0%,#00a3ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35b8ff', endColorstr='#00a3ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   #content {
     position: absolute;
     top: 50%;
@@ -63,9 +61,7 @@ header {
     h1 {
       color: #fff;
       font-size: 4rem;
-      font-weight: 900;
       margin: 0;
-      text-shadow: 0px 2px 1px #555;
     }
     h2 {
       color: #fff;

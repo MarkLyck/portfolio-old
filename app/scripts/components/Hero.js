@@ -2,6 +2,7 @@ import React from 'react'
 import TweenLite from '../other/TweenLite'
 import EasePack from '../other/EasePack.min.js'
 
+
 var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 let canvasHeight = 500
 
@@ -174,14 +175,12 @@ const Hero = React.createClass({
       return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
   },
   render() {
-    // let title = "<Webdeveloper/>"
-    let title = "HELLO,"
     return (
       <div id="hero">
-        <canvas id="hero-canvas"/>
-        <div id="content">
-          <h1>{title}</h1>
-          <h2>I'm a webdeveloper who is currently<button className="outline-btn">Available for hire</button></h2>
+        <canvas id="hero-canvas" className="fade-in"/>
+        <div id="content" className="bounce-down-center">
+            <h1 key="1">My name is <span className="bold">Mark Lyck</span></h1>
+            <h2 key="2">I'm a web developer from Denmark who is currently<button className="outline-btn">Available for hire</button></h2>
         </div>
       </div>
     )

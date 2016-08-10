@@ -394,6 +394,73 @@ optgroup {
 textarea {
   overflow: auto; }
 
+.shake {
+  animation: 300ms shake; }
+
+.slide-out {
+  animation: 500ms slideOut; }
+
+.bounce-down-center {
+  animation: 500ms bounceDownCenter; }
+
+@keyframes bounceDownCenter {
+  0% {
+    top: -50%;
+    opacity: 0; }
+  25% {
+    top: 58%;
+    opacity: 0.25; }
+  50% {
+    top: 46%;
+    opacity: 0.50; }
+  75% {
+    top: 54%;
+    opacity: 0.75; }
+  100% {
+    top: 50%;
+    opacity: 1; } }
+@keyframes slideOut {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-200%); } }
+.fade-in {
+  animation: 500ms fadeIn; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%); }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+@keyframes shake {
+  0% {
+    transform: translateX(-5%); }
+  25% {
+    transform: translateX(5%); }
+  50% {
+    transform: translateX(-5%); }
+  75% {
+    transform: translateX(5%); }
+  100% {
+    transform: translateX(0%); } }
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
 header {
   position: relative; }
   header nav {
@@ -427,8 +494,10 @@ header {
           color: #00a3ff; }
 
 #hero-canvas {
-  width: 100%;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#35b8ff+0,00a3ff+100 */
+  width: 100%; }
+
+#hero {
+  position: relative;
   background: #35b8ff;
   /* Old browsers */
   background: -moz-linear-gradient(-45deg, #35b8ff 0%, #00a3ff 100%);
@@ -439,9 +508,6 @@ header {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35b8ff', endColorstr='#00a3ff',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
-
-#hero {
-  position: relative; }
   #hero #content {
     position: absolute;
     top: 50%;
@@ -455,9 +521,7 @@ header {
     #hero #content h1 {
       color: #fff;
       font-size: 4rem;
-      font-weight: 900;
-      margin: 0;
-      text-shadow: 0px 2px 1px #555; }
+      margin: 0; }
     #hero #content h2 {
       color: #fff;
       display: flex;
@@ -501,5 +565,8 @@ button {
   color: #fff;
   background: none;
   border: 1px solid #fff; }
+
+.bold {
+  font-weight: 400; }
 
 /*# sourceMappingURL=main.css.map */

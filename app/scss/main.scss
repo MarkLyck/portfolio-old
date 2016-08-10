@@ -2,10 +2,15 @@
 @import "variables";
 @import "animations";
 @import "hero";
+@import "recentProjects";
 
 
 body {
   font-family: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {

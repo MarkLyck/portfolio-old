@@ -25,11 +25,13 @@ header {
         align-items: center;
         justify-content: center;
         width: 100px;
-        height: 100%;
-        transition: background .3s, color .3s;
+        padding: 20px 0 0 0;
+        margin-right: 20px;
+        transition: border-color .3s;
+        border-bottom: 3px solid transparent;
         &:hover {
-          background: #fff;
-          color: $primary-color;
+          cursor: pointer;
+          border-bottom-color: #fff;
         }
       }
     }

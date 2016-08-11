@@ -16,6 +16,10 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 h1,h2 {
@@ -36,6 +40,12 @@ button {
   background: $primary-color;
   border: none;
   border-radius: 3px;
+  color: #fff;
+  padding: 20px 40px;
+  &:hover {
+    cursor: pointer;
+    background: darken($primary-color, 5%);
+  }
 }
 
 .outline-btn {

@@ -3,14 +3,20 @@
 @import "animations";
 @import "hero";
 @import "recentProjects";
+@import "footer";
 
 
 body {
   font-family: 'Lato', sans-serif;
+  margin-bottom: 100px;
 }
 
 * {
   box-sizing: border-box;
+}
+
+#app {
+  position: relative;
 }
 
 a {

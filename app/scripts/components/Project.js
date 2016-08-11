@@ -72,11 +72,11 @@ const Project = React.createClass({
           <p className="description">{this.props.project.description}</p>
           <div className="bottom">
             <button className="see-it-live" onClick={this.gotoLiveSite} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={buttonStyles}>See it live</button>
-            <a className="github-link" href={this.props.project.githubLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={linkStyles}><i className="fa fa-github" aria-hidden="true"></i>Or view it on GitHub</a>
+            <a className="github-link" href={this.props.project.githubLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={linkStyles}><i className="fa fa-github" aria-hidden="true"></i>View it on GitHub</a>
           </div>
         </div>
         <div className={lastClass}>
-          <img src={this.props.project.img} className="slide-up"/>
+          <img src={this.props.project.img} className="project-image slide-up"/>
         </div>
       </div>
     )

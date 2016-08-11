@@ -17,7 +17,7 @@ const recentProjects = [
                   add your orders to the cart,
                   make special requests and place your order.
                   Restaurant owner can see orders, mark them as done or delete them.`,
-    timespan: '2 days',
+    timespan: '3 days',
     img: 'assets/images/projects/flammen_screen.png',
     backgroundColor: '#febe51',
     domColor: '#C94745',

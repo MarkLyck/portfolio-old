@@ -26,8 +26,6 @@ const Project = React.createClass({
     return {buttonColor: this.props.project.domColor, linkColor: '#fff'}
   },
   gotoLiveSite() {
-    console.log('go to live');
-    // window.location.href = this.props.project.liveLink
     location.href = this.props.project.liveLink
   },
   hoverState(e) {
@@ -57,17 +55,27 @@ const Project = React.createClass({
     let linkStyles = {
       color: this.state.linkColor
     }
+    let firstClass
+    let lastClass
+    if (this.props.number % 2 === 0) {
+      firstClass = "left"
+      lastClass = "right"
+    } else {
+      firstClass = "right"
+      lastClass = "left"
+    }
     return (
       <div className="project" style={projectStyles}>
-        <div className="left">
+        <div className={firstClass}>
           <h3>{this.props.project.name}</h3>
-          <p>{this.props.project.description}</p>
+          <p className="time-span"><span className="light">built in:</span> {this.props.project.timespan}</p>
+          <p className="description">{this.props.project.description}</p>
           <div className="bottom">
             <button className="see-it-live" onClick={this.gotoLiveSite} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={buttonStyles}>See it live</button>
             <a className="github-link" href={this.props.project.githubLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={linkStyles}><i className="fa fa-github" aria-hidden="true"></i>Or view it on GitHub</a>
           </div>
         </div>
-        <div className="right">
+        <div className={lastClass}>
           <img src={this.props.project.img} className="slide-up"/>
         </div>
       </div>

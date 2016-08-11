@@ -565,6 +565,12 @@ header {
     border-bottom: 3px solid #fff;
     font-size: 2rem; }
 
+.recent-projects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
+
 .project {
   display: flex;
   color: #fff;
@@ -579,15 +585,26 @@ header {
     align-items: flex-end;
     margin-right: 50px;
     width: 50%;
-    position: relative; }
+    position: relative;
+    order: 1; }
+    .project .left img {
+      max-height: 100%;
+      position: absolute;
+      bottom: 0;
+      transition: transform 1s; }
+      .project .left img:hover {
+        transform: scale(1.2); }
     .project .left h3 {
       font-weight: bold;
       font-size: 2.5rem;
       margin: 40px 0 0 0; }
+    .project .left .time-span {
+      margin: 0; }
     .project .left p {
-      font-weight: normal;
-      max-width: 350px;
       text-align: right; }
+    .project .left .description {
+      max-width: 350px;
+      font-weight: 100; }
     .project .left .bottom {
       position: absolute;
       bottom: 25px;
@@ -608,12 +625,46 @@ header {
   .project .right {
     width: 50%;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-left: 50px;
-    position: relative; }
+    position: relative;
+    order: 2; }
     .project .right img {
       max-height: 100%;
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      transition: transform 1s; }
+      .project .right img:hover {
+        transform: scale(1.2); }
+    .project .right h3 {
+      font-weight: bold;
+      font-size: 2.5rem;
+      margin: 40px 0 0 0; }
+    .project .right .time-span {
+      margin: 0; }
+    .project .right p {
+      text-align: left; }
+    .project .right .description {
+      max-width: 350px;
+      font-weight: 100; }
+    .project .right .bottom {
+      position: absolute;
+      bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .project .right .bottom button {
+        padding: 20px 80px;
+        background: #1DBB86;
+        margin-bottom: 15px; }
+        .project .right .bottom button:hover {
+          background: #168f66; }
+      .project .right .bottom a {
+        font-weight: lighter;
+        font-size: 0.8rem; }
+        .project .right .bottom a i {
+          margin: 0 5px; }
 
 body {
   font-family: 'Lato', sans-serif; }
@@ -655,5 +706,8 @@ button {
 
 .bold {
   font-weight: 400; }
+
+.light {
+  font-weight: 100; }
 
 /*# sourceMappingURL=main.css.map */

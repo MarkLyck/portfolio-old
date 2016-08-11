@@ -8,13 +8,16 @@ const Portfolio = React.createClass({
     let allRecentProjects = recentProjects.map((project, i) => {
       return (<Project
         key={i}
+        number={i}
         name={project.name}
         project={project}/>)
     })
     return (
       <div id="recent-projects">
         <h2 className="section-header">Recent Projects</h2>
-        {allRecentProjects}
+        <ul className="recent-projects-list">
+          {allRecentProjects}
+        </ul>
       </div>
     )
   }

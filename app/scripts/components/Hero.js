@@ -120,7 +120,8 @@ const Hero = React.createClass({
               } else if(Math.abs(this.getDistance(target, points[i])) < 20000) {
                   points[i].active = 0.1;
                   points[i].circle.active = 0.3;
-              } else if(Math.abs(this.getDistance(target, points[i])) < 40000) {
+                                                                  // Was 40000
+              } else if(Math.abs(this.getDistance(target, points[i])) < 50000) {
                   points[i].active = 0.02;
                   points[i].circle.active = 0.1;
               } else {

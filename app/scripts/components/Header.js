@@ -10,7 +10,7 @@ const Header = React.createClass({
         <nav>
           <Link to="/" id="logo">Mark Lyck</Link>
           <div className="right">
-            <Link to="/resume">Resumé</Link>
+            <Link to="/resume">Résumé</Link>
           </div>
         </nav>
         <Hero/>

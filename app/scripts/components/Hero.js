@@ -72,9 +72,6 @@ const Hero = React.createClass({
   addListeners() {
       if(!('ontouchstart' in window)) {
           window.addEventListener('mousemove', this.mouseMove);
-          // window.addEventListener('mousemove', (e) => {
-          //   window.setTimeout(this.mouseMove.bind(null, e), 200)
-          // });
       }
       window.addEventListener('scroll', this.scrollCheck);
       window.addEventListener('resize', this.resize);

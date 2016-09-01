@@ -1,8 +1,8 @@
-import {hashHistory} from 'react-router';
+import {browserHistory} from 'react-router';
 
 let store = {
   settings: {
-    history: hashHistory
+    history: browserHistory
   }
 }
 

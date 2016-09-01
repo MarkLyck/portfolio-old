@@ -394,6 +394,9 @@ optgroup {
 textarea {
   overflow: auto; }
 
+.blue-color {
+  color: #00a3ff; }
+
 .shake {
   animation: 300ms shake; }
 
@@ -586,7 +589,7 @@ header {
     transition: transform 1s;
     z-index: 0; }
     .project .project-image:hover {
-      transform: scale(1.2); }
+      transform: scale(1.1); }
   .project h3 {
     font-weight: bold;
     font-size: 2.5rem;
@@ -645,6 +648,22 @@ footer {
   z-index: 100;
   position: absolute;
   bottom: -100px; }
+
+.resume-modal-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; }
+  .resume-modal-container #resume-modal {
+    width: 80%;
+    max-width: 850px;
+    height: 90%;
+    z-index: 20; }
 
 body {
   font-family: 'Lato', sans-serif;

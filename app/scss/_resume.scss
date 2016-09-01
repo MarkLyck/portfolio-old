@@ -1,0 +1,17 @@
+.resume-modal-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background: rgba(#000, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  #resume-modal {
+    width: 80%;
+    max-width: 850px;
+    height: 90%;
+    z-index: 20;
+  }
+}

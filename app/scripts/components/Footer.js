@@ -6,7 +6,7 @@ const Footer = React.createClass({
   render: function() {
     return (
       <footer>
-      <p>Contact me at <a>mark.lyck@gmail.com</a></p>
+      <p>Contact me at <a className="blue-color">hello@markdid.it</a></p>
       </footer>
     )
   }

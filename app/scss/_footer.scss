@@ -9,4 +9,9 @@ footer {
   z-index: 100;
   position: absolute;
   bottom: -100px;
+  p {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 }

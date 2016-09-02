@@ -648,6 +648,8 @@ footer {
   z-index: 100;
   position: absolute;
   bottom: -100px; }
+  footer p a:hover {
+    text-decoration: underline; }
 
 .resume-modal-container {
   position: fixed;

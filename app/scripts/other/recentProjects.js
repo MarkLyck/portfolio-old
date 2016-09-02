@@ -18,8 +18,8 @@ const recentProjects = [
                   listen to music & more. Fully unit tested.`,
     timespan: '1 week',
     img: 'assets/images/projects/btb_img.png',
-    backgroundColor: '#A65E5E',
-    domColor: '#1DBB86',
+    backgroundColor: '#1DBB86',
+    domColor: '#323B42',
     liveLink: 'https://marklyck.github.io/Bring-the-Band/',
     githubLink: 'https://github.com/MarkLyck/Bring-the-Band'
   },

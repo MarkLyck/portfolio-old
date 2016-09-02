@@ -26,7 +26,7 @@ const Project = React.createClass({
     return {buttonColor: this.props.project.domColor, linkColor: '#fff'}
   },
   gotoLiveSite() {
-    location.href = this.props.project.liveLink
+		window.open(this.props.project.liveLink, '_blank');
   },
   hoverState(e) {
     console.log(e.target.classList);
@@ -72,7 +72,7 @@ const Project = React.createClass({
           <p className="description">{this.props.project.description}</p>
           <div className="bottom">
             <button className="see-it-live" onClick={this.gotoLiveSite} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={buttonStyles}>See it live</button>
-            <a className="github-link" href={this.props.project.githubLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={linkStyles}><i className="fa fa-github" aria-hidden="true"></i>View it on GitHub</a>
+            <a className="github-link" target="_blank" href={this.props.project.githubLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={linkStyles}><i className="fa fa-github" aria-hidden="true"></i>View it on GitHub</a>
           </div>
         </div>
         <div className={lastClass}>

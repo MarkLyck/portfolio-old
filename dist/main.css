@@ -642,6 +642,8 @@ footer {
   z-index: 100;
   position: absolute;
   bottom: -350px; }
+  footer h2 {
+    font-size: 3rem; }
   footer .container {
     height: 100%;
     width: 100%;
@@ -655,7 +657,8 @@ footer {
     footer .container .social-link {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      transition: color .3s; }
       footer .container .social-link i {
         font-size: 4rem;
         max-height: 80px; }

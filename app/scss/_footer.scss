@@ -1,5 +1,5 @@
 footer {
-  height: 100px;
+  height: 350px;
   width: 100%;
   background: #323B42;
   display: flex;
@@ -8,10 +8,42 @@ footer {
   color: #fff;
   z-index: 100;
   position: absolute;
-  bottom: -100px;
-  p {
-    a:hover {
-      text-decoration: underline;
+  bottom: -350px;
+  .container {
+    height: 100%;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 20px;
+      i {
+        font-size: 4rem;
+        max-height: 80px;
+      }
+      p {
+        opacity: 0;
+        transition: opacity .3s;
+        margin: 10px 0;
+      }
+      &:hover {
+        color: $primary-color;
+        p {
+          opacity: 1;
+        }
+      }
+    }
+    .social-link:nth-child(2) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

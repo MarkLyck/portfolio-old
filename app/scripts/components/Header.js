@@ -4,13 +4,17 @@ import {Link} from 'react-router'
 import Hero from './Hero'
 
 const Header = React.createClass({
+  openResume() {
+    window.open('assets/Mark_Lyck_resume.pdf', '_blank');
+  },
   render: function() {
+    //<Link to="/resume">Résumé</Link>
     return (
       <header>
         <nav>
           <Link to="/" id="logo">Mark Lyck</Link>
           <div className="right">
-            <Link to="/resume">Résumé</Link>
+            <a onClick={this.openResume}>Résumé</a>
           </div>
         </nav>
         <Hero/>

@@ -65,7 +65,7 @@ const Project = React.createClass({
       lastClass = "left"
     }
     return (
-      <div className="project" style={projectStyles}>
+      <li className="project" style={projectStyles}>
         <div className={firstClass}>
           <h3>{this.props.project.name}</h3>
           <p className="time-span"><span className="light">built in:</span> {this.props.project.timespan}</p>
@@ -78,7 +78,7 @@ const Project = React.createClass({
         <div className={lastClass}>
           <img src={this.props.project.img} className="project-image slide-up"/>
         </div>
-      </div>
+      </li>
     )
   }
 })

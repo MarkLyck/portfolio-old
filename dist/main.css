@@ -456,22 +456,6 @@ textarea {
   100% {
     transform: translateY(0%);
     opacity: 1; } }
-@keyframes shake {
-  0% {
-    transform: translateX(-5%); }
-  25% {
-    transform: translateX(5%); }
-  50% {
-    transform: translateX(-5%); }
-  75% {
-    transform: translateX(5%); }
-  100% {
-    transform: translateX(0%); } }
-@keyframes rotate {
-  0% {
-    transform: rotateZ(0deg); }
-  100% {
-    transform: rotateZ(360deg); } }
 header {
   position: relative; }
   header nav {
@@ -541,12 +525,13 @@ header {
       justify-content: center;
       align-items: center;
       margin-top: 25px; }
-      #hero #content h2 button {
-        margin-left: 20px;
+      #hero #content h2 a {
+        margin-left: 10px;
         font-size: 1rem;
         padding: 10px 20px;
-        transition: background .3s, color .3s; }
-        #hero #content h2 button:hover {
+        transition: background .3s, color .3s;
+        border-radius: 3px; }
+        #hero #content h2 a:hover {
           background: #fff;
           color: #00a3ff;
           cursor: pointer; }

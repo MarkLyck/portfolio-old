@@ -179,7 +179,7 @@ const Hero = React.createClass({
         <canvas id="hero-canvas" className="fade-in"/>
         <div id="content" className="bounce-down-center">
             <h1 key="1"><span className="bold">Hello!</span> My name is <span className="bold">Mark</span></h1>
-            <h2 key="2">I'm a web developer from Denmark who is currently<button className="outline-btn">Available for hire</button></h2>
+            <h2 key="2">I'm a front end developer from Denmark who is currently<a className="outline-btn" href="mailto:hello@markdid.it">Available for hire</a></h2>
         </div>
       </div>
     )

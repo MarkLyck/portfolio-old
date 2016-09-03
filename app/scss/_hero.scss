@@ -71,11 +71,12 @@ header {
       justify-content: center;
       align-items: center;
       margin-top: 25px;
-      button {
-        margin-left: 20px;
+      a {
+        margin-left: 10px;
         font-size: 1rem;
         padding: 10px 20px;
         transition: background .3s, color .3s;
+        border-radius: 3px;
         &:hover {
           background: #fff;
           color: $primary-color;

@@ -8,7 +8,6 @@ const Header = React.createClass({
     window.open('assets/Mark_Lyck_Resume.pdf', '_blank');
   },
   render: function() {
-    //<Link to="/resume">Résumé</Link>
     return (
       <header>
         <nav>

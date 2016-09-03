@@ -86,30 +86,3 @@
     opacity: 1;
   }
 }
-
-@keyframes shake {
-  0% {
-    transform: translateX(-5%);
-  }
-  25%{
-    transform: translateX(5%);
-  }
-  50%{
-    transform: translateX(-5%);
-  }
-  75%{
-    transform: translateX(5%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
-}

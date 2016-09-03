@@ -648,7 +648,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; }
+    position: relative;
+    opacity: 0; }
     footer .container .social-link {
       display: flex;
       flex-direction: column;
@@ -670,6 +671,8 @@ footer {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%); }
+  footer .fade-in {
+    opacity: 1; }
 
 .resume-modal-container {
   position: fixed;

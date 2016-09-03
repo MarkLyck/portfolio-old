@@ -60,7 +60,6 @@ const Project = React.createClass({
     let wH = $(window).height()
 
     if ($(window).scrollTop() > (hT + hH - wH) - 350) {
-      console.log('animate');
       this.setState({animate: true})
       $(window).off('scroll', this.animate)
     };

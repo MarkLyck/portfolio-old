@@ -5,7 +5,7 @@ import Hero from './Hero'
 
 const Header = React.createClass({
   openResume() {
-    window.open('assets/Mark_Lyck_resume.pdf', '_blank');
+    window.open('assets/Mark_Lyck_Resume.pdf', '_blank');
   },
   render: function() {
     //<Link to="/resume">Résumé</Link>

@@ -1,5 +1,6 @@
 import React from 'react'
 import _ from 'underscore'
+import $ from 'jquery'
 
 function ColorLuminance(hex, lum) {
 
@@ -23,7 +24,10 @@ function ColorLuminance(hex, lum) {
 
 const Project = React.createClass({
   getInitialState() {
-    return {buttonColor: this.props.project.domColor, linkColor: '#fff'}
+    return {
+			buttonColor: this.props.project.domColor,
+			linkColor: '#fff',
+			animate: false}
   },
   gotoLiveSite() {
 		window.open(this.props.project.liveLink, '_blank');
@@ -44,8 +48,24 @@ const Project = React.createClass({
       this.setState({linkColor: '#fff'})
     }
   },
+	componentDidMount() {
+    $(window).on('scroll', this.animate)
+  },
+  componentWillUnmount() {
+    $(window).off('scroll', this.animate)
+  },
+  animate() {
+    let hT = $(this.refs.project).offset().top
+    let hH = $(this.refs.project).outerHeight()
+    let wH = $(window).height()
+
+    if ($(window).scrollTop() > (hT + hH - wH) - 350) {
+      console.log('animate');
+      this.setState({animate: true})
+      $(window).off('scroll', this.animate)
+    };
+  },
   render() {
-    console.log(this.props);
     let projectStyles = {
       background: this.props.project.backgroundColor
     }
@@ -64,8 +84,16 @@ const Project = React.createClass({
       firstClass = "right"
       lastClass = "left"
     }
+
+		let imgClass = "project-image"
+		if (this.state.animate) {
+			imgClass = "project-image slide-up"
+		}
+
+		console.log(imgClass);
+
     return (
-      <li className="project" style={projectStyles}>
+      <li className="project" style={projectStyles} ref="project">
         <div className={firstClass}>
           <h3>{this.props.project.name}</h3>
           <p className="time-span"><span className="light">built in:</span> {this.props.project.timespan}</p>
@@ -76,7 +104,7 @@ const Project = React.createClass({
           </div>
         </div>
         <div className={lastClass}>
-          <img src={this.props.project.img} className="project-image slide-up"/>
+          <img src={this.props.project.img} className={imgClass}/>
         </div>
       </li>
     )

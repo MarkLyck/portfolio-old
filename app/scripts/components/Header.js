@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router'
+import Scroll from 'react-scroll'
 
 import Hero from './Hero'
 
@@ -8,10 +9,11 @@ const Header = React.createClass({
     window.open('assets/Mark_Lyck_Resume.pdf', '_blank');
   },
   render: function() {
+    let scroll = Scroll.animateScroll
     return (
       <header>
         <nav>
-          <Link to="/" id="logo">Mark Lyck</Link>
+          <a id="logo" onClick={() => {scroll.scrollToTop({duration: 350, smooth: true})}}>Mark Lyck</a>
           <div className="right">
             <a onClick={this.openResume}>Résumé</a>
           </div>

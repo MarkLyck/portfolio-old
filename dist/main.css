@@ -403,9 +403,6 @@ textarea {
 .slide-out {
   animation: 500ms slideOut; }
 
-.slide-up {
-  animation: 500ms slideUp; }
-
 .bounce-down-center {
   animation: 500ms bounceDownCenter; }
 
@@ -430,6 +427,9 @@ textarea {
     transform: translateY(0); }
   to {
     transform: translateY(-200%); } }
+.slide-up {
+  animation: 500ms slideUp; }
+
 @keyframes slideUp {
   from {
     transform: translateY(100%); }
@@ -566,15 +566,19 @@ header {
   width: 100%;
   position: relative;
   padding-top: 75px;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  overflow: hidden; }
   .project .project-image {
     max-height: 100%;
     position: absolute;
     bottom: 0;
     transition: transform 1s;
-    z-index: 0; }
+    z-index: 0;
+    opacity: 0; }
     .project .project-image:hover {
       transform: scale(1.1); }
+  .project .slide-up {
+    opacity: 1; }
   .project h3 {
     font-weight: bold;
     font-size: 2.5rem;
@@ -621,6 +625,9 @@ header {
 
 .project:first-child {
   padding-top: 50px; }
+  .project:first-child .project-image {
+    animation: 500ms slideUp;
+    opacity: 1; }
 
 footer {
   height: 100px;

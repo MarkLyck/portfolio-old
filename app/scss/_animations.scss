@@ -6,10 +6,6 @@
   animation: 500ms slideOut;
 }
 
-.slide-up {
-  animation: 500ms slideUp;
-}
-
 .bounce-down-center {
   animation: 500ms bounceDownCenter;
 }
@@ -44,6 +40,10 @@
   to {
     transform: translateY(-200%);
   }
+}
+
+.slide-up {
+  animation: 500ms slideUp;
 }
 @keyframes slideUp {
   from {

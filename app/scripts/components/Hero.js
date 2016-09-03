@@ -173,13 +173,12 @@ const Hero = React.createClass({
       return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
   },
   render() {
-    //<h1 key="1">My name is <span className="bold">Mark Lyck</span></h1>
     return (
       <div id="hero">
         <canvas id="hero-canvas" className="fade-in"/>
         <div id="content" className="bounce-down-center">
             <h1 key="1"><span className="bold">Hello!</span> My name is <span className="bold">Mark</span></h1>
-            <h2 key="2">I'm a front end developer from Denmark who is currently<a className="outline-btn" href="mailto:hello@markdid.it">Available for hire</a></h2>
+            <h2 key="2">I'm a Danish front end developer who is currently<a className="outline-btn" href="mailto:hello@markdid.it">Available for hire</a></h2>
         </div>
       </div>
     )

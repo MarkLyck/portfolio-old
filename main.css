@@ -530,6 +530,7 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 0 40px;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -551,12 +552,16 @@ nav {
         font-size: 1rem;
         padding: 10px 20px;
         transition: background .3s, color .3s;
-        border-radius: 3px; }
+        border-radius: 3px;
+        text-align: center; }
         #hero #content h2 a:hover {
           background: #fff;
           color: #00a3ff;
           cursor: pointer; }
 
+@media (max-width: 800px) {
+  nav {
+    position: absolute; } }
 #recent-projects {
   background: #323B42; }
   #recent-projects .section-header {
@@ -584,7 +589,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    width: 100%; }
     .project header h2 {
       font-weight: bold;
       font-size: 2rem;
@@ -635,6 +641,15 @@ nav {
       .project .container .tablet-landscape img {
         max-width: 100%; }
 
+@media (max-width: 650px) {
+  .project header .cta-container {
+    flex-direction: column;
+    align-items: center; }
+    .project header .cta-container a {
+      margin-top: 20px;
+      width: 65%; }
+  .project .container .tablet-landscape {
+    max-width: 100%; } }
 footer {
   height: 350px;
   width: 100%;
@@ -660,19 +675,24 @@ footer {
     align-items: center;
     position: relative;
     opacity: 0;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0 40px; }
     footer .container .social-link {
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: color .3s; }
+      transition: color .3s;
+      position: relative;
+      padding-bottom: 30px; }
       footer .container .social-link i {
         font-size: 4rem;
         max-height: 80px; }
       footer .container .social-link p {
         opacity: 0;
         transition: opacity .3s;
-        margin: 10px 0; }
+        margin: 10px 0;
+        position: absolute;
+        bottom: 0; }
       footer .container .social-link:hover {
         color: #00a3ff; }
         footer .container .social-link:hover p {
@@ -708,7 +728,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0 40px 0; }
+  padding: 80px 40px 40px 40px; }
   .case-study header {
     text-align: center;
     color: #fff;
@@ -783,6 +803,13 @@ footer {
     .case-study main .cta-container a:last-child {
       margin-right: 0; }
 
+@media (max-width: 700px) {
+  .case-study main .wireframes .wireframes-container {
+    flex-direction: column; }
+    .case-study main .wireframes .wireframes-container .wireframe {
+      width: 100%; }
+    .case-study main .wireframes .wireframes-container .wireframe:first-child {
+      margin-bottom: 20px; } }
 body {
   font-family: 'Lato', sans-serif; }
 

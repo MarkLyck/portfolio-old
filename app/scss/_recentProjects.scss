@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 30px;
+    width: 100%;
     h2 {
       font-weight: bold;
       font-size: 2rem;
@@ -94,89 +95,22 @@
 
 }
 
-// .project {
-//   display: flex;
-//   color: #fff;
-//   height: 350px;
-//   width: 100%;
-//   position: relative;
-//   padding-top: 75px;
-//   box-sizing: content-box;
-//   overflow: hidden;
-//   .project-image {
-//     max-height: 100%;
-//     position: absolute;
-//     bottom: 0;
-//     transition: transform 0.5s;
-//     z-index: 0;
-//     opacity: 0;
-//     &:hover {
-//       transform: scale(1.1);
-//     }
-//   }
-//   .slide-up {
-//     opacity: 1;
-//   }
-//   h3 {
-//     font-weight: bold;
-//     font-size: 2.5rem;
-//     margin: 40px 0 0 0;
-//   }
-//   .time-span {
-//     margin: 0;
-//   }
-//   .description {
-//     max-width: 350px;
-//     font-weight: 100;
-//   }
-//   .bottom {
-//     position: absolute;
-//     bottom: 25px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     button {
-//       padding: 20px 80px;
-//       margin-bottom: 15px;
-//     }
-//     a {
-//       font-weight: normal;
-//       font-size: 0.8rem;
-//       i {
-//         margin: 0 5px;
-//       }
-//     }
-//   }
-//   .left {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-end;
-//     margin-right: 50px;
-//     width: 50%;
-//     position: relative;
-//     order: 1;
-//     p {
-//       text-align: right;
-//     }
-//   }
-//   .right {
-//     width: 50%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     margin-left: 50px;
-//     position: relative;
-//     order: 2;
-//     p {
-//       text-align: left;
-//     }
-//   }
-// }
-//
-// .project:first-child {
-//   padding-top: 50px;
-//   .project-image {
-//     animation: 500ms slideUp;
-//     opacity: 1;
-//   }
-// }
+@media (max-width: 650px) {
+  .project {
+    header {
+      .cta-container {
+        flex-direction: column;
+        align-items: center;
+        a {
+          margin-top: 20px;
+          width: 65%;
+        }
+      }
+    }
+    .container {
+      .tablet-landscape {
+        max-width: 100%;
+      }
+    }
+  }
+}

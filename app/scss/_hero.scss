@@ -55,6 +55,7 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 0 40px;
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: center;
@@ -78,6 +79,7 @@ nav {
         padding: 10px 20px;
         transition: background .3s, color .3s;
         border-radius: 3px;
+        text-align: center;
         &:hover {
           background: #fff;
           color: $primary-color;
@@ -85,5 +87,11 @@ nav {
         }
       }
     }
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    position: absolute;
   }
 }

@@ -67,12 +67,8 @@ const Project = React.createClass({
       caseStudy = <Link className="case-study-btn" to={`/projects/${caseStudyLink}`}>View Case Study</Link>
     }
 
-    let buttonStyles = {
-      background: this.state.buttonColor
-    }
-    let linkStyles = {
-      color: this.state.linkColor
-    }
+    let buttonStyles = {background: this.state.buttonColor}
+    let linkStyles = {color: this.state.linkColor}
 
 
     return (

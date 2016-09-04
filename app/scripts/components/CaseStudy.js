@@ -1,4 +1,6 @@
 import React from 'react'
+import _ from 'underscore'
+import {Link} from 'react-router'
 
 import Nav from './Nav'
 import recentProjects from '../other/recentProjects'
@@ -24,7 +26,31 @@ function ColorLuminance(hex, lum) {
 }
 
 const CaseStudy = React.createClass({
-  render() {
+  getInitialState() {
+    return {
+			buttonColor: '',
+			linkColor: '#fff',
+      project: false,
+			animate: false
+    }
+  },
+  hoverState(e) {
+    console.log(e.target.classList);
+    if (_.toArray(e.target.classList).indexOf('see-it-live') !== -1) {
+      this.setState({buttonColor: ColorLuminance(this.state.project.domColor, -0.25)})
+    } else if (_.toArray(e.target.classList).indexOf('github-link') !== -1) {
+      this.setState({linkColor: this.state.project.domColor})
+    }
+  },
+  normalState(e) {
+    console.log(e.target.classList);
+    if (_.toArray(e.target.classList).indexOf('see-it-live') !== -1) {
+      this.setState({buttonColor: this.state.project.domColor})
+    } else if (_.toArray(e.target.classList).indexOf('github-link') !== -1) {
+      this.setState({linkColor: '#fff'})
+    }
+  },
+  componentDidMount() {
     let project = recentProjects.filter((project) => {
       let projectName = this.props.params.project.replace('-', ' ')
       if (project.name === projectName) {
@@ -33,33 +59,39 @@ const CaseStudy = React.createClass({
         return false
       }
     })[0]
-
-    let wireframes = project.caseStudy.wireframes.map((wireframe, i) => {
+    this.setState({project: project, buttonColor: project.domColor})
+  },
+  render() {
+    if (!this.state.project) {
+      return null
+    }
+    let wireframes = this.state.project.caseStudy.wireframes.map((wireframe, i) => {
       const wfStyle = {backgroundImage: `url("${wireframe}")`}
       return <div className="wireframe" style={wfStyle} key={i}></div>
     })
 
-    let technologies = project.caseStudy.technologies.map((tech, i) => {
+    let technologies = this.state.project.caseStudy.technologies.map((tech, i) => {
       return <li className="tech" key={i}>{tech}</li>
     })
 
-    let caseStudyStyles = { backgroundColor: project.backgroundColor }
-    let tabletStyle = { background: `${ColorLuminance(project.backgroundColor, -0.25)}` }
+    let caseStudyStyles = { backgroundColor: this.state.project.backgroundColor }
+    let tabletStyle = { background: `${ColorLuminance(this.state.project.backgroundColor, -0.25)}` }
+    let buttonStyles = {background: this.state.buttonColor}
 
     return (
       <div className="case-study" style={caseStudyStyles}>
         <Nav/>
         <header>
-          <h2>{project.name}</h2>
-          <p>{project.description}</p>
+          <h2>{this.state.project.name}</h2>
+          <p>{this.state.project.description}</p>
           <div className="device tablet-landscape" style={tabletStyle}>
-            <img className="tablet" src={project.caseStudy.tabletImage}/>
+            <img className="tablet" src={this.state.project.caseStudy.tabletImage}/>
           </div>
         </header>
         <main>
           <section className="process">
             <h3>Process</h3>
-            <p>{project.caseStudy.process}</p>
+            <p>{this.state.project.caseStudy.process}</p>
           </section>
           <section className="wireframes">
             <h3>Wireframe examples</h3>
@@ -69,18 +101,22 @@ const CaseStudy = React.createClass({
           </section>
           <section>
             <h3>Performance</h3>
-            <p>{project.caseStudy.performance}</p>
+            <p>{this.state.project.caseStudy.performance}</p>
           </section>
           <section className="tech-stack">
             <h3>Technology Stack</h3>
-            <p>{project.caseStudy.technologyStack}</p>
+            <p>{this.state.project.caseStudy.technologyStack}</p>
             <ul className="technologies">{technologies}</ul>
           </section>
           <section>
             <h3>Tracking and Statistics</h3>
-            <p>{project.caseStudy.tracking}</p>
-            <img src={project.caseStudy.trackingImage}/>
+            <p>{this.state.project.caseStudy.tracking}</p>
+            <img src={this.state.project.caseStudy.trackingImage}/>
           </section>
+          <div className="cta-container">
+            <Link to="/" className="back-btn"><i className="fa fa-angle-left" aria-hidden="true"></i>Back</Link>
+            <a className="see-it-live" target="_blank" href={this.state.project.liveLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={buttonStyles}>View Website</a>
+          </div>
         </main>
 
 

@@ -762,6 +762,26 @@ footer {
       background: rgba(0, 0, 0, 0.25);
       border-radius: 5px;
       margin: 5px 5px 5px 0; }
+  .case-study main .cta-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .case-study main .cta-container a {
+      padding: 15px;
+      border-radius: 5px;
+      font-weight: 100;
+      margin-right: 20px;
+      width: 150px;
+      text-align: center; }
+      .case-study main .cta-container a i {
+        margin-right: 5px; }
+    .case-study main .cta-container .back-btn {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: border-color .3s; }
+      .case-study main .cta-container .back-btn:hover {
+        border-color: #fff; }
+    .case-study main .cta-container a:last-child {
+      margin-right: 0; }
 
 body {
   font-family: 'Lato', sans-serif; }

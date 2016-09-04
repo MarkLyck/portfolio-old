@@ -8,7 +8,7 @@ import CaseStudy from './components/CaseStudy';
 import store from './store';
 
 const router = (
-  <Router history={store.settings.history}>
+  <Router history={store.settings.history} onUpdate={() => window.scrollTo(0, 0)} >
     <Route path="/" component={App}>
       <Route path="resume" component={ResumeModal}/>
     </Route>

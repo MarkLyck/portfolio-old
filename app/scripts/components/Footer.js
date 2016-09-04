@@ -48,6 +48,7 @@ const Footer = React.createClass({
             <p>Github</p>
           </a>
         </div>
+        <p>I also do freelance work</p>
       </footer>
     )
   }

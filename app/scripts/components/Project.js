@@ -59,7 +59,7 @@ const Project = React.createClass({
     let hH = $(this.refs.project).outerHeight()
     let wH = $(window).height()
 
-    if ($(window).scrollTop() > (hT + hH - wH) - 350) {
+    if ($(window).scrollTop() > (hT + hH - wH) - 200) {
       this.setState({animate: true})
       $(window).off('scroll', this.animate)
     };

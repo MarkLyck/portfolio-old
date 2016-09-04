@@ -1,7 +1,7 @@
 import React from 'react'
 
 import recentProjects from '../other/recentProjects'
-import Project from './Project'
+import Project from './Project2'
 
 const Portfolio = React.createClass({
   render() {
@@ -14,7 +14,6 @@ const Portfolio = React.createClass({
     })
     return (
       <div id="recent-projects">
-        <h2 className="section-header">Recent Projects</h2>
         <ul className="recent-projects-list">
           {allRecentProjects}
         </ul>
@@ -22,5 +21,6 @@ const Portfolio = React.createClass({
     )
   }
 })
+//        <h2 className="section-header">Recent Projects</h2>
 
 export default Portfolio

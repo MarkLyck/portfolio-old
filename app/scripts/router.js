@@ -4,6 +4,7 @@ import {Router, Route, IndexRoute} from 'react-router';
 import App from './components/App';
 import Home from './components/Home';
 import ResumeModal from './components/ResumeModal';
+import CaseStudy from './components/CaseStudy';
 import store from './store';
 
 const router = (
@@ -11,6 +12,7 @@ const router = (
     <Route path="/" component={App}>
       <Route path="resume" component={ResumeModal}/>
     </Route>
+    <Route path="/projects/:project" component={CaseStudy}/>
   </Router>
 );
 

@@ -41,7 +41,7 @@ const recentProjects = [
         the use of Babel.js to keep support for older browsers. JQuery was used for AJAX requests,
         and scroll event handling.
       `,
-      technologies: ['HTML', 'Sass', 'Javascript', 'React', 'Backbone', 'Kinvey', 'Stripe', 'JQuery', 'Underscore', 'AmCharts', 'Draft.js', 'React-Scroll', 'free-geo-api', 'Quandl'],
+      technologies: ['HTML', 'Sass', 'Javascript', 'React', 'Backbone', 'Kinvey', 'Stripe', 'JQuery', 'Underscore', 'AmCharts', 'Draft.js', 'React-smooth-scroll', 'Free-geo-api', 'Quandl', 'Moment', 'React-dropzone', 'React-html-parser'],
       tracking: `
         To get clear view on who visits the website, and how they interact on the page,
         I implemented tracking using Google Analytics. But I also implemented a custom solution where

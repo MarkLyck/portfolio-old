@@ -10,15 +10,46 @@ const recentProjects = [
     domColor: '#27A5F9',
     liveLink: 'https://formulastocks.com',
     githubLink: 'https://github.com/MarkLyck/Formula-Stocks',
-    caseStudy: {
-      tabletImage: '/assets/images/projects/formula-stocks/tablet.jpg',
-    },
     devices: [
       {
         name: 'tablet',
         image: '/assets/images/projects/formula-stocks/tablet.jpg',
       }
-    ]
+    ],
+    caseStudy: {
+      tabletImage: '/assets/images/projects/formula-stocks/tablet.jpg',
+      process: `
+        The process started with determining what features was needed for the MVP.
+        After I had the feature list and main user stories written down,
+        I wrote out the data models and collections I needed for the app.
+        I then went on to create the Dashboard wireframes in Sketch followed by a complete prototype
+        design for the landing page. Once both me and my client was happy with the designs,
+        I did some research on what libraries would be best suited for the application.
+        From that point on, I started coding the app, fully fledging out one section at a time.`,
+      wireframes: ['/assets/images/projects/formula-stocks/wf_portfolio.jpg','/assets/images/projects/formula-stocks/wf_suggestions.jpg'],
+      performance: `
+        Performance is incredibly important for a truly good user experience.
+        From the get-go, my aim was to make the website perform really well, keeping the overhead as
+        low as possible. This is not easy with a “single page” website with a lot of media and libraries.
+        Minification of assets, additional image compression, caching etc. did all contribute to keeping
+        the overhead to a minimum, something which increased the performance dramatically.
+      `,
+      technologyStack: `
+        The core component of the stack is React. It’s a library for building user interfaces.
+        I used Backbone for my data models and collection, Kinvey a Backend as a service,
+        for my Backend, proxy server and node scripts. The app was written in ES2015 Javascript with
+        the use of Babel.js to keep support for older browsers. JQuery was used for AJAX requests,
+        and scroll event handling.
+      `,
+      technologies: ['HTML', 'Sass', 'Javascript', 'React', 'Backbone', 'Kinvey', 'Stripe', 'JQuery', 'Underscore', 'AmCharts', 'Draft.js', 'React-Scroll', 'free-geo-api', 'Quandl'],
+      tracking: `
+        To get clear view on who visits the website, and how they interact on the page,
+        I implemented tracking using Google Analytics. But I also implemented a custom solution where
+        the client can see where visitors are coming from, and some more specific statistics
+        customized for Formula Stocks.
+      `,
+      trackingImage: '/assets/images/projects/formula-stocks/admin_panel.jpg',
+    }
   },
   {
     name: 'Bring the Band',

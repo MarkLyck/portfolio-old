@@ -4,7 +4,7 @@ import EasePack from '../other/EasePack.min.js'
 
 
 let width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
-let canvasHeight = 500
+let canvasHeight = 550
 
 const Hero = React.createClass({
   componentDidMount() {

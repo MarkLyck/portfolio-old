@@ -34,13 +34,17 @@ const CaseStudy = React.createClass({
       }
     })[0]
 
-    let caseStudyStyles = {
-      backgroundColor: project.backgroundColor
-    }
+    let wireframes = project.caseStudy.wireframes.map((wireframe, i) => {
+      const wfStyle = {backgroundImage: `url("${wireframe}")`}
+      return <div className="wireframe" style={wfStyle} key={i}></div>
+    })
 
-    let tabletStyle = {
-      background: `${ColorLuminance(project.backgroundColor, -0.25)}`
-    }
+    let technologies = project.caseStudy.technologies.map((tech, i) => {
+      return <li className="tech" key={i}>{tech}</li>
+    })
+
+    let caseStudyStyles = { backgroundColor: project.backgroundColor }
+    let tabletStyle = { background: `${ColorLuminance(project.backgroundColor, -0.25)}` }
 
     return (
       <div className="case-study" style={caseStudyStyles}>
@@ -48,10 +52,38 @@ const CaseStudy = React.createClass({
         <header>
           <h2>{project.name}</h2>
           <p>{project.description}</p>
+          <div className="device tablet-landscape" style={tabletStyle}>
+            <img className="tablet" src={project.caseStudy.tabletImage}/>
+          </div>
         </header>
-        <div className="device tablet-landscape" style={tabletStyle}>
-          <img className="tablet" src={project.caseStudy.tabletImage}/>
-        </div>
+        <main>
+          <section className="process">
+            <h3>Process</h3>
+            <p>{project.caseStudy.process}</p>
+          </section>
+          <section className="wireframes">
+            <h3>Wireframe examples</h3>
+            <div className="wireframes-container">
+              {wireframes}
+            </div>
+          </section>
+          <section>
+            <h3>Performance</h3>
+            <p>{project.caseStudy.performance}</p>
+          </section>
+          <section className="tech-stack">
+            <h3>Technology Stack</h3>
+            <p>{project.caseStudy.technologyStack}</p>
+            <ul className="technologies">{technologies}</ul>
+          </section>
+          <section>
+            <h3>Tracking and Statistics</h3>
+            <p>{project.caseStudy.tracking}</p>
+            <img src={project.caseStudy.trackingImage}/>
+          </section>
+        </main>
+
+
       </div>
     )
   }

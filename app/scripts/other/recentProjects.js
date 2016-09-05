@@ -89,7 +89,7 @@ const recentProjects = [
                   make special requests and place your order.
                   Restaurant owner can see orders, mark them as done or delete them.`,
     timespan: '3 days',
-    backgroundColor: '#2A252C',
+    backgroundColor: '#312B2B',
     domColor: '#C94745',
     liveLink: 'https://marklyck.github.io/restaurant-order-system/',
     githubLink: 'https://github.com/MarkLyck/restaurant-order-system',

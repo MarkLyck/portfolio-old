@@ -70,6 +70,14 @@ const Project = React.createClass({
     let buttonStyles = {background: this.state.buttonColor}
     let linkStyles = {color: this.state.linkColor}
 
+		let liveLink, githubLink;
+		if (this.props.project.liveLink) {
+			liveLink = <a className="see-it-live" target="_blank" href={this.props.project.liveLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={buttonStyles}>View Website</a>
+		}
+		if (this.props.project.githubLink) {
+			githubLink = <a className="github-link" target="_blank" href={this.props.project.githubLink} style={linkStyles}><i className="fa fa-github" aria-hidden="true"></i>GitHub</a>
+		}
+
 
     return (
       <li className="project" style={listStyle}>
@@ -78,8 +86,8 @@ const Project = React.createClass({
           <p>{this.props.project.description}</p>
           <div className="cta-container">
             {caseStudy}
-            <a className="see-it-live" target="_blank" href={this.props.project.liveLink} onMouseOver={this.hoverState} onMouseOut={this.normalState} style={buttonStyles}>View Website</a>
-            <a className="github-link" target="_blank" href={this.props.project.githubLink} style={linkStyles}><i className="fa fa-github" aria-hidden="true"></i>GitHub</a>
+						{liveLink}
+						{githubLink}
           </div>
         </header>
         <div className="container">

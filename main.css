@@ -637,7 +637,7 @@ nav {
       max-width: 65%;
       margin-bottom: -11%;
       border-radius: 14px;
-      padding: 2.5% 2.5%; }
+      padding: 25px; }
       .project .container .tablet-landscape img {
         max-width: 100%; }
 
@@ -746,7 +746,7 @@ footer {
       margin-bottom: 70px;
       margin: 0 auto;
       border-radius: 14px;
-      padding: 2.5% 2.5%; }
+      padding: 25px; }
       .case-study header .tablet-landscape img {
         width: 100%; }
   .case-study main section {

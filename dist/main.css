@@ -637,7 +637,10 @@ nav {
       max-width: 65%;
       margin-bottom: -11%;
       border-radius: 14px;
-      padding: 25px; }
+      padding: 25px;
+      transition: transform 0.5s; }
+      .project .container .tablet-landscape:hover {
+        transform: scale(1.05); }
       .project .container .tablet-landscape img {
         max-width: 100%; }
 

@@ -64,7 +64,7 @@ const recentProjects = [
     devices: [
       {
         name: 'tablet',
-        image: 'assets/images/projects/bring-the-band/tablet.jpg',
+        image: '/assets/images/projects/bring-the-band/tablet.jpg',
       }
     ]
   },

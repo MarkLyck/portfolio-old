@@ -3,7 +3,7 @@ import {Link} from 'react-router'
 
 const Nav = React.createClass({
   openResume() {
-    window.open('assets/Mark_Lyck_Resume.pdf', '_blank');
+    window.open('/assets/Mark_Lyck_Resume.pdf', '_blank');
   },
   render() {
     return (

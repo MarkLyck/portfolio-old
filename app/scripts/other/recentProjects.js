@@ -9,7 +9,7 @@ const recentProjects = [
     domColor: '#27A5F9',
     liveLink: 'https://formulastocks.com',
     githubLink: 'https://github.com/MarkLyck/Formula-Stocks',
-    screenshots: ['/assets/projects/FormulaStocks/landingPage.jpg', '/assets/projects/formulaStocks/portfolioPage.jpg', '/assets/projects/formulaStocks/suggestionsPage.jpg', '/assets/projects/formulaStocks/adminPage.jpg'],
+    screenshots: ['/assets/projects/FormulaStocks/landingPage.jpg', '/assets/projects/FormulaStocks/portfolioPage.jpg', '/assets/projects/FormulaStocks/suggestionsPage.jpg', '/assets/projects/FormulaStocks/adminPage.jpg'],
     devices: [
       {
         name: 'tablet',
@@ -47,7 +47,7 @@ const recentProjects = [
         the client can see where visitors are coming from, and some more specific statistics
         customized for Formula Stocks.
       `,
-      trackingImage: '/assets/projects/formulaStocks/adminPage.jpg',
+      trackingImage: '/assets/projects/FormulaStocks/adminPage.jpg',
     }
   },
   {

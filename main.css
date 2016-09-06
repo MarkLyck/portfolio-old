@@ -815,7 +815,7 @@ footer {
       margin-bottom: 20px; } }
 body {
   font-family: 'Lato', sans-serif;
-  -webkit-text-stroke-width: 0.1px; }
+  -webkit-text-stroke-width: 0.2px; }
 
 * {
   box-sizing: border-box; }

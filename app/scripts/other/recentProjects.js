@@ -13,7 +13,7 @@ const recentProjects = [
     devices: [
       {
         name: 'tablet',
-        image: '/assets/projects/FormulaStocks/tablet.jpg',
+        image: '/assets/projects/FormulaStocks/landingPage.jpg',
       }
     ],
     caseStudy: {

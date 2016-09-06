@@ -51,6 +51,11 @@ const CaseStudy = React.createClass({
       this.setState({linkColor: '#fff'})
     }
   },
+	componentWillReceiveProps() {
+		setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 0);
+	},
   componentDidMount() {
     let project = recentProjects.filter((project) => {
       let projectName = this.props.params.project.replace('-', ' ')

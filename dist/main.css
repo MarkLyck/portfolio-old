@@ -814,7 +814,8 @@ footer {
     .case-study main .wireframes .wireframes-container .wireframe:first-child {
       margin-bottom: 20px; } }
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  -webkit-text-stroke-width: 0.1px; }
 
 * {
   box-sizing: border-box; }

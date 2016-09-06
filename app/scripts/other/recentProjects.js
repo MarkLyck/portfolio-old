@@ -17,7 +17,6 @@ const recentProjects = [
       }
     ],
     caseStudy: {
-      tabletImage: '/assets/projects/FormulaStocks/tablet.jpg',
       process: `
         The process started with determining what features was needed for the MVP.
         After I had the feature list and main user stories written down,

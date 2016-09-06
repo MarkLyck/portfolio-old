@@ -1,6 +1,7 @@
 import React from 'react'
 import _ from 'underscore'
 import {Link} from 'react-router'
+import Carousel from 'nuka-carousel'
 
 import Nav from './Nav'
 import recentProjects from '../other/recentProjects'
@@ -60,6 +61,9 @@ const CaseStudy = React.createClass({
       }
     })[0]
     this.setState({project: project, buttonColor: project.domColor})
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 0);
   },
   render() {
     if (!this.state.project) {
@@ -78,15 +82,27 @@ const CaseStudy = React.createClass({
     let tabletStyle = { background: `${ColorLuminance(this.state.project.backgroundColor, -0.25)}` }
     let buttonStyles = {background: this.state.buttonColor}
 
+		// <div className="device tablet-landscape" style={tabletStyle}>
+		// 	<img className="tablet" src={this.state.project.caseStudy.tabletImage}/>
+		// </div>
+
+		let slideShowImages = this.state.project.screenshots.map((image, i) => {
+			return <img className="tablet" src={image} key={i}/>
+		})
+
     return (
       <div className="case-study" style={caseStudyStyles}>
         <Nav/>
+
         <header>
           <h2>{this.state.project.name}</h2>
           <p>{this.state.project.description}</p>
-          <div className="device tablet-landscape" style={tabletStyle}>
-            <img className="tablet" src={this.state.project.caseStudy.tabletImage}/>
-          </div>
+					<div className="device tablet-landscape" style={tabletStyle}>
+						<Carousel decorators={[]} autoplay={true} wrapAround={true}>
+			        {slideShowImages}
+			      </Carousel>
+					</div>
+
         </header>
         <main>
           <section className="process">

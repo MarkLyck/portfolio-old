@@ -9,14 +9,15 @@ const recentProjects = [
     domColor: '#27A5F9',
     liveLink: 'https://formulastocks.com',
     githubLink: 'https://github.com/MarkLyck/Formula-Stocks',
+    screenshots: ['/assets/projects/FormulaStocks/tablet.jpg', '/assets/projects/formulaStocks/FS_portfolio.jpg', '/assets/projects/formulaStocks/FS_suggestions.jpg', '/assets/projects/formulaStocks/Admin_Panel.jpg'],
     devices: [
       {
         name: 'tablet',
-        image: '/assets/images/projects/formula-stocks/tablet.jpg',
+        image: '/assets/projects/FormulaStocks/tablet.jpg',
       }
     ],
     caseStudy: {
-      tabletImage: '/assets/images/projects/formula-stocks/tablet.jpg',
+      tabletImage: '/assets/projects/FormulaStocks/tablet.jpg',
       process: `
         The process started with determining what features was needed for the MVP.
         After I had the feature list and main user stories written down,
@@ -25,7 +26,7 @@ const recentProjects = [
         design for the landing page. Once both me and my client was happy with the designs,
         I did some research on what libraries would be best suited for the application.
         From that point on, I started coding the app, fully fledging out one section at a time.`,
-      wireframes: ['/assets/images/projects/formula-stocks/wf_portfolio.jpg','/assets/images/projects/formula-stocks/wf_suggestions.jpg'],
+      wireframes: ['/assets/projects/FormulaStocks/wf_portfolio.jpg','/assets/projects/FormulaStocks/wf_suggestions.jpg'],
       performance: `
         Performance is incredibly important for a truly good user experience.
         From the get-go, my aim was to make the website perform really well, keeping the overhead as
@@ -47,7 +48,7 @@ const recentProjects = [
         the client can see where visitors are coming from, and some more specific statistics
         customized for Formula Stocks.
       `,
-      trackingImage: '/assets/images/projects/formula-stocks/admin_panel.jpg',
+      trackingImage: '/assets/projects/formulaStocks/admin_panel.jpg',
     }
   },
   {

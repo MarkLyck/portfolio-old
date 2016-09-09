@@ -38,7 +38,7 @@ const Footer = React.createClass({
             <p>hello@markdid.it</p>
           </a>
 
-          <a href="https://linkedin.com/in/marklyck" target="_blank" className="social-link">
+          <a href="https://linkedin.com/in/mlyck" target="_blank" className="social-link">
             <i className="fa fa-linkedin-square" aria-hidden="true"></i>
             <p>LinkedIn</p>
           </a>

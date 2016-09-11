@@ -20,7 +20,7 @@ const Skills = React.createClass({
     this.setState({hoverEffect: false})
   },
   render() {
-    const skillWidth = 110;
+    const skillWidth = 111;
     const maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth))
 
     let skillsetItems = skills.map((skill, i) => {
@@ -37,7 +37,13 @@ const Skills = React.createClass({
     let numberOfLists = Math.ceil(skillsetItems.length / maxSkillsInOneList)
     if (skillsetItems.length % maxSkillsInOneList === 0) {
       numberOfLists++
+      if (maxSkillsInOneList === 2) {
+        numberOfLists += 2
+      }
     }
+
+    console.log(numberOfLists);
+    console.log(maxSkillsInOneList);
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }
 

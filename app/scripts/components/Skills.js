@@ -5,19 +5,31 @@ import skills from '../other/skills';
 
 const Skills = React.createClass({
   getInitialState() {
-    return {resized: false}
+    return {resized: false, hoverEffect:false, windowWidth: $(window).width()}
   },
   componentDidMount() {
     $( window ).resize(() => {
       this.setState({resize: true})
     });
   },
+  hoverEffect(i) {
+    this.setState({hoverEffect: i})
+  },
+  cancelHoverEffect() {
+    this.setState({hoverEffect: false})
+  },
   render() {
     const skillWidth = 110;
-    const maxSkillsInOneList = Math.floor((($(window).width() - 110) / skillWidth))
+    const maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth))
 
     let skillsetItems = skills.map((skill, i) => {
-      return (<li key={i} className="skill"><img src={skill.img}/></li>);
+      if (this.state.hoverEffect === i) {
+        return (<li key={i} className="skill hover" data-name={skill.name} onMouseOver={this.hoverEffect.bind(this, i)} onMouseOut={this.cancelHoverEffect}><img src={skill.img}/></li>);
+      } else if (this.state.hoverEffect !== false) {
+        return (<li key={i} className="skill unselected" data-name={skill.name} onMouseOver={this.hoverEffect.bind(this, i)}><img src={skill.img}/></li>);
+      } else {
+        return (<li key={i} className="skill" data-name={skill.name} onMouseOver={this.hoverEffect.bind(this, i)}><img src={skill.img}/></li>);
+      }
     })
 
     let skillLists = []
@@ -40,17 +52,14 @@ const Skills = React.createClass({
           currentSkill++
         }
       }
-      if (i % 2 === 0 && currentSkill >= skillsetItems.length && currentSkill % 2 === 0) {
-        console.log('special list');
+
+
+      if (currentSkill >= skillsetItems.length && skillsInList.length+1 % 2 === 0) {
         return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
       } else {
         return (<ul className="skill-list" key={i}>{skillsInList}</ul>)
       }
-
     })
-
-    console.log('window width: ', $(window).width());
-    console.log('max items: ', ($(window).width() - 100) / skillWidth);
 
     return (
       <div className="skills">

@@ -24,6 +24,14 @@ const skills = [
     img: '/assets/images/skills/backbone.png'
   },
   {
+    name: 'MongoDB',
+    img: '/assets/images/skills/mongodb.png'
+  },
+  {
+    name: 'Express',
+    img: '/assets/images/skills/express.png'
+  },
+  {
     name: 'Node.js',
     img: '/assets/images/skills/node.png'
   },
@@ -40,10 +48,6 @@ const skills = [
     img: '/assets/images/skills/jquery.png'
   },
   {
-    name: 'MongoDB',
-    img: '/assets/images/skills/mongodb.png'
-  },
-  {
     name: 'Chai',
     img: '/assets/images/skills/chai.png'
   },
@@ -58,6 +62,14 @@ const skills = [
   {
     name: 'D3',
     img: '/assets/images/skills/d3.png'
+  },
+  {
+    name: 'Stripe',
+    img: '/assets/images/skills/stripe.png'
+  },
+  {
+    name: 'Kinvey (BaaS)',
+    img: '/assets/images/skills/kinvey.png'
   },
 ]
 

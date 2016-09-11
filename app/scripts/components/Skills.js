@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import _ from 'underscore';
 
 import skills from '../other/skills';
 
@@ -9,7 +10,7 @@ const Skills = React.createClass({
   },
   componentDidMount() {
     $( window ).resize(() => {
-      this.setState({resize: true})
+      this.setState({resize: true, windowWidth: $(window).width()})
     });
   },
   hoverEffect(i) {
@@ -53,8 +54,20 @@ const Skills = React.createClass({
         }
       }
 
+      skillsInList = _.without(skillsInList, undefined)
 
-      if (currentSkill >= skillsetItems.length && skillsInList.length+1 % 2 === 0) {
+      let skillsInAboveList = maxSkillsInOneList
+      if ((numberOfLists - 2) % 2 !== 0) { skillsInAboveList = maxSkillsInOneList - 1 }
+
+      let aboveListIsEven = true;
+      if (skillsInAboveList % 2 !== 0) { aboveListIsEven = false; }
+
+      let lastListIsEven = true;
+      if ((skillsInList.length) % 2 !== 0) {
+        lastListIsEven = false;
+      }
+
+      if (currentSkill >= skillsetItems.length && aboveListIsEven === lastListIsEven) {
         return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
       } else {
         return (<ul className="skill-list" key={i}>{skillsInList}</ul>)

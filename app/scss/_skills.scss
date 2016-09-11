@@ -16,7 +16,7 @@
     margin-top: 50px;
   }
   .skills-container {
-    margin: 50px;
+    margin: 50px 50px 75px 50px;
     .skill-list {
       display: flex;
       flex-wrap: wrap;
@@ -28,7 +28,11 @@
         &:hover::after {
           content: attr(data-name);
           position: absolute;
-          bottom: -25px;
+          background: rgba(0,0,0,0.75);
+          padding: 10px 20px;
+          border-radius: 5px;
+          bottom: -45px;
+          width: auto;
           left: 50%;
           transform: translateX(-50%);
           color: #fff;

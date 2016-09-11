@@ -732,7 +732,10 @@ nav {
     .currently-exploring .right img {
       width: 100px;
       height: 111px;
-      margin-right: 20px; }
+      margin-right: 20px;
+      transition: transform .5s; }
+      .currently-exploring .right img:hover {
+        transform: scale(1.1); }
 
 footer {
   height: 350px;

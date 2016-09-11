@@ -6,22 +6,22 @@ import skills from '../other/skills';
 
 const Skills = React.createClass({
   getInitialState() {
-    return {resized: false, hoverEffect:false, windowWidth: $(window).width()}
+    return {resized: false, hoverEffect:false, windowWidth: $(window).width()};
   },
   componentDidMount() {
     $( window ).resize(() => {
-      this.setState({resize: true, windowWidth: $(window).width()})
+      this.setState({resize: true, windowWidth: $(window).width()});
     });
   },
   hoverEffect(i) {
-    this.setState({hoverEffect: i})
+    this.setState({hoverEffect: i});
   },
   cancelHoverEffect() {
-    this.setState({hoverEffect: false})
+    this.setState({hoverEffect: false});
   },
   render() {
     const skillWidth = 111;
-    const maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth))
+    const maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth));
 
     let skillsetItems = skills.map((skill, i) => {
       if (this.state.hoverEffect === i) {
@@ -33,17 +33,14 @@ const Skills = React.createClass({
       }
     })
 
-    let skillLists = []
-    let numberOfLists = Math.ceil(skillsetItems.length / maxSkillsInOneList)
+    let skillLists = [];
+    let numberOfLists = Math.ceil(skillsetItems.length / maxSkillsInOneList);
     if (skillsetItems.length % maxSkillsInOneList === 0) {
-      numberOfLists++
+      numberOfLists++;
       if (maxSkillsInOneList === 2) {
-        numberOfLists += 2
+        numberOfLists += 2;
       }
     }
-
-    console.log(numberOfLists);
-    console.log(maxSkillsInOneList);
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }
 
@@ -53,17 +50,17 @@ const Skills = React.createClass({
       let skillsInList = [];
       if(i % 2 === 0) {
         while (skillsInList.length < maxSkillsInOneList) {
-          skillsInList.push(skillsetItems[currentSkill])
-          currentSkill++
+          skillsInList.push(skillsetItems[currentSkill]);
+          currentSkill++;
         }
       } else {
         while (skillsInList.length < (maxSkillsInOneList - 1)) {
-          skillsInList.push(skillsetItems[currentSkill])
-          currentSkill++
+          skillsInList.push(skillsetItems[currentSkill]);
+          currentSkill++;
         }
       }
 
-      skillsInList = _.without(skillsInList, undefined)
+      skillsInList = _.without(skillsInList, undefined);
 
       let skillsInAboveList = maxSkillsInOneList
       if ((numberOfLists - 2) % 2 !== 0) { skillsInAboveList = maxSkillsInOneList - 1 }
@@ -72,14 +69,12 @@ const Skills = React.createClass({
       if (skillsInAboveList % 2 !== 0) { aboveListIsEven = false; }
 
       let lastListIsEven = true;
-      if ((skillsInList.length) % 2 !== 0) {
-        lastListIsEven = false;
-      }
+      if ((skillsInList.length) % 2 !== 0) { lastListIsEven = false; }
 
       if (currentSkill >= skillsetItems.length && aboveListIsEven === lastListIsEven) {
-        return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
+        return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>);
       } else {
-        return (<ul className="skill-list" key={i}>{skillsInList}</ul>)
+        return (<ul className="skill-list" key={i}>{skillsInList}</ul>);
       }
     })
 
@@ -94,4 +89,4 @@ const Skills = React.createClass({
   }
 })
 
-export default Skills
+export default Skills;

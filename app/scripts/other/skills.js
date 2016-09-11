@@ -40,12 +40,12 @@ const skills = [
     img: '/assets/images/skills/git.png'
   },
   {
-    name: 'Neat & Bourbon',
-    img: '/assets/images/skills/neat.png'
-  },
-  {
     name: 'JQuery',
     img: '/assets/images/skills/jquery.png'
+  },
+  {
+    name: 'Neat & Bourbon',
+    img: '/assets/images/skills/neat.png'
   },
   {
     name: 'Chai',
@@ -54,10 +54,6 @@ const skills = [
   {
     name: 'Mocha',
     img: '/assets/images/skills/mocha.png'
-  },
-  {
-    name: 'Swift',
-    img: '/assets/images/skills/swift.png'
   },
   {
     name: 'D3',
@@ -71,6 +67,11 @@ const skills = [
     name: 'Kinvey (BaaS)',
     img: '/assets/images/skills/kinvey.png'
   },
+  {
+    name: 'Swift',
+    img: '/assets/images/skills/swift.png'
+  },
+
 ]
 
 export default skills

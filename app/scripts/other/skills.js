@@ -44,7 +44,11 @@ const skills = [
     img: '/assets/images/skills/jquery.png'
   },
   {
-    name: 'Neat & Bourbon',
+    name: 'Bourbon',
+    img: '/assets/images/skills/bourbon.png'
+  },
+  {
+    name: 'Neat',
     img: '/assets/images/skills/neat.png'
   },
   {
@@ -64,11 +68,11 @@ const skills = [
     img: '/assets/images/skills/stripe.png'
   },
   {
-    name: 'Kinvey (BaaS)',
+    name: 'Kinvey',
     img: '/assets/images/skills/kinvey.png'
   },
   {
-    name: 'Pug (templating engine)',
+    name: 'Pug',
     img: '/assets/images/skills/pug.png'
   },
   {

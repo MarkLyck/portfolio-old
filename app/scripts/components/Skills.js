@@ -37,9 +37,9 @@ const Skills = React.createClass({
     let numberOfLists = Math.ceil(skillsetItems.length / maxSkillsInOneList);
     if (skillsetItems.length % maxSkillsInOneList === 0) {
       numberOfLists++;
-      if (maxSkillsInOneList === 2) {
-        numberOfLists += 2;
-      }
+    }
+    if (maxSkillsInOneList === 2) {
+      numberOfLists += 3;
     }
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }

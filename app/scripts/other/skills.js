@@ -68,6 +68,10 @@ const skills = [
     img: '/assets/images/skills/kinvey.png'
   },
   {
+    name: 'Pug (templating engine)',
+    img: '/assets/images/skills/pug.png'
+  },
+  {
     name: 'Swift',
     img: '/assets/images/skills/swift.png'
   },

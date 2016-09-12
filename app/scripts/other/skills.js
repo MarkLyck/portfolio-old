@@ -44,7 +44,7 @@ const skills = [
     img: '/assets/images/skills/jquery.png'
   },
   {
-    name: 'Bourbon ',
+    name: 'Bourbon',
     img: '/assets/images/skills/bourbon.png'
   },
   {

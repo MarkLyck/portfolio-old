@@ -27,6 +27,7 @@ const Skills = React.createClass({
     const maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth));
 
     let skillsetItems = skills.map((skill, i) => {
+      console.log(skill);
       if (this.state.hoverEffect === i) {
         return (<li key={i} className="skill hover" data-name={skill.name} onMouseOver={this.hoverEffect.bind(this, i)} onMouseOut={this.cancelHoverEffect}><img src={skill.img}/></li>);
       } else if (this.state.hoverEffect !== false) {

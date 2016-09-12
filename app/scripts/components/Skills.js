@@ -9,9 +9,12 @@ const Skills = React.createClass({
     return {resized: false, hoverEffect:false, windowWidth: $(window).width()};
   },
   componentDidMount() {
-    $( window ).resize(() => {
+    $(window).resize(() => {
       this.setState({resize: true, windowWidth: $(window).width()});
     });
+  },
+  componentWillUnmount() {
+    $(window).off('resize');
   },
   hoverEffect(i) {
     this.setState({hoverEffect: i});

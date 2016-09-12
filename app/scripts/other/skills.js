@@ -75,6 +75,10 @@ const skills = [
     name: 'Swift',
     img: '/assets/images/skills/swift.png'
   },
+  {
+    name: 'Sketch',
+    img: '/assets/images/skills/sketch.png'
+  },
 
 ]
 

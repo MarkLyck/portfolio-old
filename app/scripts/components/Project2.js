@@ -50,6 +50,9 @@ const Project = React.createClass({
       let style = {
         background: `${ColorLuminance(this.props.project.backgroundColor, -0.25)}`
       }
+      // let style = {
+        // background: `#262C32`,
+      // }
       if (device.name === 'tablet') {
         return <div className="device tablet-landscape" key={i} style={style}><img className="tablet" src={device.image}/></div>
       } else if (device.name === 'phone') {
@@ -60,6 +63,22 @@ const Project = React.createClass({
     let listStyle = {
       backgroundColor: this.props.project.backgroundColor
     }
+    // let listStyle = {
+		// 	background: this.props.project.backgroundColor,
+		// 	background: `-moz-linear-gradient(-45deg,  #323b42 40%, #323b42 40%, ${this.props.project.domColor} 100%)`,
+		// 	background: `-webkit-linear-gradient(-45deg,  #323b42 40%,#323b42 40%,${this.props.project.domColor} 100%)`,
+		// 	background: `linear-gradient(135deg,  #323b42 40%,#323b42 40%,${this.props.project.domColor} 100%)`,
+		// 	filter: `progid:DXImageTransform.Microsoft.gradient( startColorstr='#323b42', endColorstr='${this.props.project.domColor}',GradientType=1 )`,
+    // }
+
+    // let listStyle = {
+		// 	background: `#323b42`,
+		// 	background: `-moz-linear-gradient(top,  #323b42 50%, ${this.props.project.domColor} 100%)`,
+		// 	background: `-webkit-linear-gradient(top,  #323b42 50%,${this.props.project.domColor} 100%)`,
+		// 	background: `linear-gradient(to bottom,  #323b42 50%,${this.props.project.domColor} 100%)`,
+		// 	filter: `progid:DXImageTransform.Microsoft.gradient( startColorstr='#323b42', endColorstr='${this.props.project.domColor}',GradientType=0 )`
+    // }
+
 
     let caseStudy;
     if (this.props.project.caseStudy) {

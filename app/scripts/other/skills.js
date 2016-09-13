@@ -76,6 +76,14 @@ const skills = [
     img: '/assets/images/skills/pug.png'
   },
   {
+    name: 'Gulp',
+    img: '/assets/images/skills/gulp.png'
+  },
+  {
+    name: 'AWS',
+    img: '/assets/images/skills/aws.png'
+  },
+  {
     name: 'Swift',
     img: '/assets/images/skills/swift.png'
   },

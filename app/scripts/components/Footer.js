@@ -28,7 +28,7 @@ const Footer = React.createClass({
   },
   render: function() {
     let containerClass = "container"
-    if (this.state.animate) {
+    if (this.state.animate || (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)) {
       containerClass = "container fade-in"
     }
     return (

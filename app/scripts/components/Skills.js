@@ -24,7 +24,7 @@ const Skills = React.createClass({
   },
   render() {
     const skillWidth = 111;
-    const maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth));
+    let maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth));
 
     let skillsetItems = skills.map((skill, i) => {
       if (this.state.hoverEffect === i) {
@@ -37,15 +37,17 @@ const Skills = React.createClass({
     })
 
     let skillLists = [];
-    let numberOfLists = Math.ceil(skillsetItems.length / maxSkillsInOneList);
-    if (skillsetItems.length % maxSkillsInOneList === 0) {
-      numberOfLists++;
-    }
-    if (maxSkillsInOneList === 2) {
-      numberOfLists += 2;
-    } else if (maxSkillsInOneList === 3) {
-      numberOfLists++
-    }
+
+    // Problem: every second line, will have 1 less item in it. And maxSkillsInOneList is too many.
+
+    let numberOfLists = Math.ceil(skillsetItems.length / (maxSkillsInOneList - 0.5));
+
+    // console.log('lists: ', numberOfLists);
+    // console.log('maxSkills: ', maxSkillsInOneList);
+    // console.log('skillsLength: ', skillsetItems.length);
+    // if (numberOfLists % 2 === 0) {
+    //   console.log('true');
+    // }
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }
 

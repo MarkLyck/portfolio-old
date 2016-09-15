@@ -173,9 +173,13 @@ const Hero = React.createClass({
       return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
   },
   render() {
+    let canvas = (<canvas id="hero-canvas" className="fade-in"/>)
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+      canvas = <div id="canvas-placeholder"></div>
+    }
     return (
       <div id="hero">
-        <canvas id="hero-canvas" className="fade-in"/>
+        {canvas}
         <div id="content" className="bounce-down-center">
             <h1 key="1">
             <span className="bold">Hello! </span>

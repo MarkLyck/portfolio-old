@@ -20,6 +20,10 @@ const skills = [
     img: '/assets/images/skills/react.png'
   },
   {
+    name: 'Redux',
+    img: '/assets/images/skills/redux.png'
+  },
+  {
     name: 'Backbone',
     img: '/assets/images/skills/backbone.png'
   },

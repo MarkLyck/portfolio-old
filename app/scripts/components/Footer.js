@@ -2,13 +2,15 @@ import React from 'react'
 import {Link} from 'react-router'
 import $ from 'jquery'
 
-//<p>Contact me at <a className="blue-color" href="mailto:hello@markdid.it">hello@markdid.it</a></p>
 const Footer = React.createClass({
   getInitialState() {
     return {animate: false}
   },
   componentDidMount() {
     $(window).on('scroll', this.animate)
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+      this.setState({animate: true})
+    }
   },
   componentWillUnmount() {
     $(window).off('scroll', this.animate)

@@ -184,7 +184,10 @@ const Hero = React.createClass({
             <h1 key="1">
             <span className="bold">Hello! </span>
              My name is <span className="bold">Mark</span></h1>
-            <h2 key="2">I'm a Danish front end developer based in Austin TX, who is currently<a className="outline-btn" href="mailto:hello@markdid.it">Available for hire</a></h2>
+             <div className="sub">
+              <h2 key="2">I'm a Danish front end developer based in Austin TX, who is currently</h2>
+              <a className="outline-btn" href="mailto:hello@markdid.it">Available for hire</a>
+            </div>
         </div>
       </div>
     )

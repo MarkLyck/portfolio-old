@@ -42,12 +42,19 @@ const Skills = React.createClass({
 
     let numberOfLists = Math.ceil(skillsetItems.length / (maxSkillsInOneList - 0.5));
 
+    if (numberOfLists === 8 && skillsetItems.length === 25) {
+      numberOfLists--
+    }
+
     // console.log('lists: ', numberOfLists);
     // console.log('maxSkills: ', maxSkillsInOneList);
     // console.log('skillsLength: ', skillsetItems.length);
     // if (numberOfLists % 2 === 0) {
     //   console.log('true');
     // }
+
+    console.log('skills: ', skillsetItems.length);
+    console.log('lists: ', numberOfLists);
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }
 

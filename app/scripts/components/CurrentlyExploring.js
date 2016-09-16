@@ -6,8 +6,8 @@ const CurrentlyExploring = React.createClass({
       <section className="currently-exploring">
         <h2>I'm currently exploring</h2>
         <div className="right">
-          <img src="/assets/images/skills/webpack.png"/>
-          <h2>webpack</h2>
+          <img src="/assets/images/skills/angular.png"/>
+          <h2>Angular</h2>
         </div>
       </section>
     )

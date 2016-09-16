@@ -53,8 +53,8 @@ const Skills = React.createClass({
     //   console.log('true');
     // }
 
-    console.log('skills: ', skillsetItems.length);
-    console.log('lists: ', numberOfLists);
+    // console.log('skills: ', skillsetItems.length);
+    // console.log('lists: ', numberOfLists);
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }
 

@@ -48,6 +48,10 @@ const skills = [
     img: '/assets/images/skills/jquery.png'
   },
   {
+    name: 'Meteor',
+    img: '/assets/images/skills/meteor.png'
+  },
+  {
     name: 'Bourbon',
     img: '/assets/images/skills/bourbon.png'
   },
@@ -62,6 +66,10 @@ const skills = [
   {
     name: 'Mocha',
     img: '/assets/images/skills/mocha.png'
+  },
+  {
+    name: 'Jest',
+    img: '/assets/images/skills/jest.png'
   },
   {
     name: 'D3',
